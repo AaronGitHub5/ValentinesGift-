@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>A question for Mait</title>
+</head>
+
+<body>
+    <!-- Add the audio element for background music -->
+    <audio id="background-music" loop>
+        <source src="Howl/Music.mp3" type="audio/mp3">
+        Your browser does not support the audio tag.
+    </audio>
+
+    <div class="container">
+        <div class="Mainprompt">
+            <img class="image" src="images/Boba.jpg"></img>
+            <h1 class="hh" id="name">Hey Mait !</h1>
+            <p class="pp" id="question">Will you be my Valentine?</p>
+            <div class="buttons">
+                <button id="no-button" onclick="showMessage('No')">No</button>
+                <button onclick="showMessage('Yes')" id="yesButton">Yes</button>
+            </div>
+            <div class="hidden-message" id="no-message">
+                <p>Nice try, but you can't escape that easily!</p>
+            </div>
+            <div class="hidden-message" id="yes-message">
+                <p>YAY! See you on the 14th, babygirl.</p>
+            </div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+    
+    <script>
+        // JavaScript code to play the background music
+        var audio = document.getElementById("background-music");
+        audio.volume = 0.5; // You can adjust the volume (0.0 to 1.0)
+        audio.play();
+    </script>
+</body>
+
+</html>
